@@ -9,31 +9,55 @@
     <script src="./service-worker.js"></script>
     <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
     <script>//window.onload = function(){location.href = './loading/'}</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://supsok.github.io/gbsw/touchstrap/js/touchstrap.js"></script>
+
 </head>
 <body>
+
+
+  <section class="page center" id="page01">
+    <header class="bar bar-nav bar-light bg-faded">
+      <h1 class="title">첫번째페이지</h1>
+    </header>
+    <main class="content">
+      <div class="content-padded">
+        <button type="button" class="btn btn-primary" data-toggle="page" data-start="#page01" data-target="#page02">페이지 호출</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Launch modal
+        </button>
+      </div>
+    </main>
+  </section>
+
+  <section class="page right" id="page02">
+    <header class="bar bar-nav bar-light bg-faded">
+      <button class="btn btn-primary pull-left" data-history="back">
+        Back
+      </button>
+      <h1 class="title">두번째페이지</h1>
+    </header>
+    <main class="content">
+      <div class="content-padded">
+        안녕하세요
+      </div>
+      
+    </main>
+  </section>
+
+
+  <!-- Modal -->
+<div id="myModal" class="modal">
   <header class="bar bar-nav bar-light bg-faded">
-    <h1 class="title">집에가고싶다</h1>
+    <a class="icon icon-close pull-right" data-dismiss="modal" role="button"></a>
+    <h1 class="title">Modal</h1>
   </header>
-  <nav class="bar bar-tab bar-light bg-faded">
-    <a class="tab-item active" role="button">
-      <span class="icon icon-home"></span>
-      <span class="tab-label">집에</span>
-    </a>
-    <a class="tab-item" role="button">
-      <span class="icon icon-person"></span>
-      <span class="tab-label">가고</span>
-    </a>
-    <a class="tab-item bg-primary bar-dark" role="button">
-      <span class="icon icon-star-filled"></span>
-      <span class="tab-label">싶다</span>
-    </a>
-  </nav>
-
-
-<main class="content">
-  <div class="content-padded">
-    안녕하세요
+  <div class="content">
+    <p class="content-padded">
+      The contents of my modal go here.
+    </p>
   </div>
-</main>
+</div>
+
 </body>
 </html>
