@@ -1,0 +1,47 @@
+.namePage_title{
+    text-align: center;
+    font-size: 20px;
+    color : #FF8669 !important;
+    padding-top: 48px;
+    margin-bottom: 48px;
+    
+}
+
+.namePage_input{
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border: none;
+    outline: none;
+    width: 85%;
+    padding-left: 24px;
+    height: 42px;
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #FF8669;
+    font-weight: bold;
+}
+
+.btn_goToChat{
+    display: none;
+    background-color: #FF8669;
+    color: white;
+    padding: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transition: all .5s ease;
+    border: 1px solid #FF8669;
+    transform: translateX(-50%);
+}
+
+.btn_goToChat:hover{
+    background-color: white;
+    color: #FF8669;
+    border: 1px solid #FF8669;
+}
