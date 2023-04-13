@@ -5,9 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 앱</title>
-  <script>window.onload = function(){location.href = '/loading/'}</script>
+    <link rel="manifest" href="./manifest.json">
+    <script src="./service-worker.js"></script>
+    <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
+    <script>//window.onload = function(){location.href = './loading/'}</script>
 </head>
 <body>
-    
+  <header class="bar bar-nav bar-light bg-faded">
+    <h1 class="title">집에가고싶다</h1>
+  </header>
+  <nav class="bar bar-tab bar-light bg-faded">
+    <a class="tab-item active" role="button">
+      <span class="icon icon-home"></span>
+      <span class="tab-label">집에</span>
+    </a>
+    <a class="tab-item" role="button">
+      <span class="icon icon-person"></span>
+      <span class="tab-label">가고</span>
+    </a>
+    <a class="tab-item bg-primary bar-dark" role="button">
+      <span class="icon icon-star-filled"></span>
+      <span class="tab-label">싶다</span>
+    </a>
+  </nav>
+
+
+<main class="content">
+  <div class="content-padded">
+    안녕하세요
+  </div>
+</main>
 </body>
 </html>
