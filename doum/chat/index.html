@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅하기</title>
+    <link rel="stylesheet" href="../src/css/main.css">
+    <script src="../js/chat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.kimsq.com/rc/1.0.0-alpha.3/css/rc.css">
+    <script src="https://cdn.kimsq.com/rc/1.0.0-alpha.3/js/rc.min.js"></script>
+</head>
+
+<body>
+
+    <div id="idContainer" style="display:none">
+                <textarea id="txtOutput" rows="10" style="margin-top: 10px; width: 100%;" 
+                 placeholder="Output"></textarea>
+        
+                <div>
+                    <button type="button" onclick="Send()" id="btnSend">Send</button>
+                    <label id="lblSpeak"><input id="chkSpeak" type="checkbox" 
+                     onclick="SpeechToText()" />Listen</label>
+                    <label id="lblMute"><input id="chkMute" type="checkbox" 
+                     onclick="Mute(this.checked)"/>Mute</label>
+        
+                    <select id="selModel">
+                        <option value="text-davinci-003">text-davinci-003</option>
+                        <option value="text-davinci-002">text-davinci-002</option>
+                        <option value="code-davinci-002">code-davinci-002</option>
+                    </select>
+        
+                    <select id="selLang" onchange="ChangeLang(this)">
+                        <option value="en-US">English (United States)</option>
+                        <option value="fr-FR">French (France)</option>
+                        <option value="ru-RU">Russian (Russia)</option>
+                        <option value="pt-BR">Portuguese (Brazil)</option>
+                        <option value="es-ES">Spanish (Spain)</option>
+                        <option value="de-DE">German (Germany)</option>
+                        <option value="it-IT">Italian (Italy)</option>
+                        <option value="pl-PL">Polish (Poland)</option>
+                        <option value="nl-NL">Dutch (Netherlands)</option>
+                    </select>
+        
+                    <select id="selVoices"></select>
+                </div>
+        
+                
+                <div id="idText"></div>
+            </div>
+
+
+        
+    <div class="top">
+        <a class="top_backButton" href="../name/">종료하기</a>
+        <div class="top_title"></div>
+    </div>
+
+    <div class="chatBox">
+
+        
+    
+
+    </div>
+
+    <div class="bottom_bar">
+        <div   class="bottom_form"  >
+            <input type="text" autocomplete="off" onkeyup="if (window.event.keyCode == 13) { Send() }" class="bar_input" name="message" autocomplete="false" id="txtMsg">
+            <div class="post_button" onclick="Send()"><i class="fa-solid fa-paper-plane"></i></div>
+        </div>
+    </div>
+</body>
+
+</html>
